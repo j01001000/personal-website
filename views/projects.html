@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jun Hong's OpenGL computer graphics and Excel Numerov-method projects, including the harmonic oscillator, particle in a well, and particle on a hill.">
+    <meta name="theme-color" content="#18364e">
+    <title>Projects | Jun Hong</title>
+    <link rel="stylesheet" href="../resources/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <script src="../resources/js/vendor/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header d-print-none">
+      <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand site-brand" href="home.html">Jun Hong</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-navigation" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <div class="collapse navbar-collapse" id="primary-navigation">
+            <ul class="navbar-nav ms-auto flex-wrap gap-1 mt-3 mt-lg-0">
+              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+              <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container website-page" id="main-content">
+      <header class="page-header">
+        <h1>Projects</h1>
+        <p class="summary">Computer graphics and numerical methods.</p>
+      </header>
+      <section class="project-category" aria-labelledby="opengl-heading">
+        <header class="project-category-header">
+          <h2 class="project-category-title" id="opengl-heading">OpenGL Projects</h2>
+          <p class="summary">Computer Graphics</p>
+          <a class="project-link" href="https://github.com/j01001000/computer-graphics">github.com/j01001000/computer-graphics</a>
+        </header>
+        <div class="project-list">
+          <article class="project" aria-labelledby="planet-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/optimized/miller.webp" type="image/webp">
+              <img class="img-fluid project-image" src="../resources/img/miller.png" width="1006" height="1033" alt="CASE and Ranger about to be engulfed by a giant wave on Miller's planet." loading="lazy">
+            </picture>
+                  <figcaption>Screenshot of Miller's planet from the project.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">01</p>
+                <h3 id="planet-heading">Miller&rsquo;s planet</h3>
+                <p>Rendered Miller&rsquo;s planet from <em>Interstellar</em> &mdash; cube-mapped environment, lighting from surface normals, and a 2D wave simulation for its giant wave.</p>
+                <a class="project-resource" href="https://github.com/j01001000/computer-graphics/tree/main/millersplanet">View Miller&rsquo;s planet source on Github</a>
+              </div>
+            </div>
+          </article>
+          <article class="project" aria-labelledby="orbitals-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/optimized/orbitals.webp" type="image/webp">
+              <img class="img-fluid project-image" src="../resources/img/orbitals.png" width="799" height="631" alt="Probability-density particle shader showing the hydrogen 4f orbital." loading="lazy">
+            </picture>
+                  <figcaption>Illustration of a 4f orbital&rsquo;s probability density.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">02</p>
+                <h3 id="orbitals-heading">Hydrogen-atom orbitals</h3>
+                <p>Visualized hydrogen-atom orbitals by sampling analytic wavefunctions into instanced GPU particle systems.</p>
+                <a class="project-resource" href="https://github.com/j01001000/computer-graphics/tree/main/orbitals">View hydrogen-atom orbitals source on Github</a>
+              </div>
+            </div>
+          </article>
+          <article class="project" aria-labelledby="lensing-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/optimized/black-hole.webp" type="image/webp">
+              <img class="img-fluid project-image" src="../resources/img/black-hole.png" width="1923" height="1111" alt="Ray-traced image of a black hole with gravitational lensing effects." loading="lazy">
+            </picture>
+                  <figcaption>Ray-traced image of a black hole with gravitational lensing effects.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">03</p>
+                <h3 id="lensing-heading">Gravitational lensing</h3>
+                <p>Simulated gravitational lensing (an Einstein ring) around a non-rotating black hole by integrating photon paths with RK4 in OpenCL over a sphere-mapped background.</p>
+                <a class="project-resource" href="https://github.com/j01001000/computer-graphics/tree/main/blackhole">View gravitational lensing source on Github</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-category" aria-labelledby="excel-heading">
+        <header class="project-category-header">
+          <h2 class="project-category-title" id="excel-heading">Excel Assignments</h2>
+          <p class="summary">Applications of Numerov method to one-dimensional quantum systems in Excel.</p>
+        </header>
+        <div class="project-list">
+          <article class="project" aria-labelledby="sho-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/Numerov/optimized/SHO_E0.webp" type="image/webp">
+              <img class="img-fluid project-image project-chart" src="../resources/img/Numerov/SHO_E0.png" width="2841" height="1627" alt="Excel chart of a normalized harmonic-oscillator wavefunction in ground state, plotted alongside a parabolic potential." loading="lazy">
+            </picture>
+                  <figcaption>Ground state wavefunction of a harmonic oscillator.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">01</p>
+                <h3 id="sho-heading">Simple Harmonic Oscillator</h3>
+                <p>Studied the simple harmonic oscillator using the Numerov method in Excel, plotting a normalized wavefunction alongside the quadratic potential.</p>
+                <a class="project-resource" href="../resources/img/Numerov/SHO_E0.png">View full-size oscillator chart</a>
+              </div>
+            </div>
+          </article>
+          <article class="project" aria-labelledby="piw-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/Numerov/optimized/PIW_E3.webp" type="image/webp">
+              <img class="img-fluid project-image project-chart" src="../resources/img/Numerov/PIW_E3.png" width="2841" height="1627" alt="Excel chart of a normalized wavefunction oscillating inside a finite square well and decaying outside its boundaries, with the well potential overlaid." loading="lazy">
+            </picture>
+                  <figcaption>Second excited state wavefunction and finite-well potential.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">02</p>
+                <h3 id="piw-heading">Particle in a Well</h3>
+                <p>Explored a particle in a finite potential well with the Numerov method in Excel. The chart shows an oscillating wavefunction inside the well and decaying tails outside.</p>
+                <a class="project-resource" href="../resources/img/Numerov/PIW_E3.png">View full-size potential-well chart</a>
+              </div>
+            </div>
+          </article>
+          <article class="project" aria-labelledby="pih-heading">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-lg-5">
+                <figure class="project-figure">
+                  <picture>
+              <source srcset="../resources/img/Numerov/optimized/PIH_WKB.webp" type="image/webp">
+              <img class="img-fluid project-image project-chart" src="../resources/img/Numerov/PIH_WKB.png" width="2695" height="1627" alt="Excel chart comparing a normalized wavefunction with oscillating and exponentially decaying WKB approximations across a rising linear potential." loading="lazy">
+            </picture>
+                  <figcaption>Wavefunction, linear potential, and WKB approximations.</figcaption>
+                </figure>
+              </div>
+              <div class="col-12 col-lg-7">
+                <p class="project-number" aria-hidden="true">03</p>
+                <h3 id="pih-heading">Particle on a Hill</h3>
+                <p>Solved the wavefunction of a particle on a linear potential using the Numerov method and WKB approximations in Excel. WKB approximations are good except near the classical turning points.</p>
+                <a class="project-resource" href="../resources/img/Numerov/PIH_WKB.png">View full-size WKB comparison chart</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="container site-footer d-flex flex-wrap align-items-center justify-content-between gap-3 d-print-none">
+      <p>&copy; 2026 Jun Hong</p>
+      <div class="footer-links d-flex flex-wrap gap-4">
+        <a href="mailto:jun.s.hong@colorado.edu">Email</a>
+        <a href="https://www.linkedin.com/in/j01001000/">LinkedIn</a>
+        <a href="https://github.com/j01001000">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jun Hong's personal website, education, projects, and resume.">
+    <meta name="theme-color" content="#18364e">
+    <title>Home | Jun Hong</title>
+    <link rel="stylesheet" href="../resources/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <script src="../resources/js/vendor/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header d-print-none">
+      <!-- Bootstrap annotation 1: navbar-expand-lg (main navigation).
+           Shows the expanded navigation at viewport widths of 992px and above.
+           Below that breakpoint, the collapse component and Menu button let
+           visitors open and close the navigation. -->
+      <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand site-brand" href="home.html">Jun Hong</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-navigation" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <div class="collapse navbar-collapse" id="primary-navigation">
+            <ul class="navbar-nav ms-auto flex-wrap gap-1 mt-3 mt-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="home.html" aria-current="page">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Bootstrap annotation 2: container (main content area).
+         Centers the content with automatic side margins and provides responsive
+         maximum widths and horizontal padding. The custom stylesheet adjusts
+         those widths and padding to match this website's design. -->
+    <main class="container website-page" id="main-content">
+      <header class="page-header home-intro">
+        <div class="row align-items-center g-4">
+          <!-- Bootstrap annotation 3: col-lg-7 (introduction text column).
+               Uses 7 of Bootstrap's 12 grid columns at widths of 992px and above.
+               The accompanying col-12 class makes this column full-width on
+               smaller screens, stacking the text above the photograph. -->
+          <div class="col-12 col-lg-7"> <!-- parent -->
+            <h1>Jun Hong</h1> <!-- child -->
+            <p class="summary">I&rsquo;m a mathematician and former university lecturer, now studying physics and chemistry at CU Boulder.</p>
+            <p class="intro-detail">My interests are in the physical sciences and computing. Outside of coursework, I enjoy reading books and watching TV shows.</p>
+            <a class="btn btn-primary resume-button d-print-none" href="resume.html">View resume</a>
+          </div>
+          <div class="col-12 col-lg-5">
+            <img class="intro-image img-fluid" src="../resources/img/profile.jpg" width="960" height="540" alt="Jun Hong standing beside an elevation sign with mountains in the background at Rocky Mountain National Park in 2014." fetchpriority="high">
+          </div>
+        </div>
+      </header>
+    <!--
+    <section class="content-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="about-grid">
+        <article>
+          <h3>Education</h3>
+          <p>B.S. Statistics &amp; Data Science, Physics, and Chemistry at the University of Colorado, Boulder, expected May 2029.</p>
+          <p>M.A. Mathematics, University of Colorado, Boulder, December 2018. B.A. Mathematics, University of California, Berkeley, December 2013.</p>
+        </article>
+      </div>
+    </section>
+    -->
+      <section class="content-section contact-section" aria-labelledby="opportunity-heading">
+        <h2 id="opportunity-heading">Open to Work</h2>
+        <p>I am currently seeking internship and research opportunities for 2027. If you have a position that may be a good fit, please reach out to me via email or LinkedIn.</p>
+      </section>
+    </main>
+    <footer class="container site-footer d-flex flex-wrap align-items-center justify-content-between gap-3 d-print-none">
+      <p>&copy; 2026 Jun Hong</p>
+      <div class="footer-links d-flex flex-wrap gap-4">
+        <a href="mailto:jun.s.hong@colorado.edu">Email</a>
+        <a href="https://www.linkedin.com/in/j01001000/">LinkedIn</a>
+        <a href="https://github.com/j01001000">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

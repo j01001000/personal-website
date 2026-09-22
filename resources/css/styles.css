@@ -1,0 +1,274 @@
+/* Requirement: Custom colors. These variables define the shared navy and gray palette. */
+:root {
+      color-scheme: light;
+      --ink: #202b34;
+      --muted: #52616d;
+      --accent: #18364e;
+      --link: #125b83;
+      --rule: #d9e0e5;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 100%; }
+    /* Requirement: Element selector. body applies these styles to the page body. */
+    body {
+      margin: 0;
+      background: #edf1f4;
+      color: var(--ink);
+      /* Requirement: Custom typography. Set the body font, size, and line spacing. */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: .2em; overflow-wrap: anywhere; }
+    a:hover { color: var(--accent); text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+    /* Requirement: Class selector. .resume styles elements with class="resume". */
+    .resume {
+      /* Requirement: Margin and padding. Add space outside and inside the resume. */
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+      padding: 3.5rem 4rem;
+      background: #fff;
+      /* Requirement: Border or shadow. Add a navy top border and a subtle page shadow. */
+      border-top: 5px solid var(--accent);
+      box-shadow: 0 8px 40px #18364e0a;
+    }
+    .page-header { padding-bottom: 1.65rem; border-bottom: 1px solid var(--accent); }
+    h1 { margin: 0; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 3.5rem; font-weight: 400; line-height: 1.15; letter-spacing: -.035em; }
+    .section { padding-top: 2rem; }
+    .section + .section { margin-top: 2rem; border-top: 1px solid var(--rule); }
+    .section-label { margin: .2rem 0 0; color: var(--accent); font-size: .875rem; font-weight: 650; line-height: 1.55; letter-spacing: .08em; text-transform: uppercase; }
+    .section-body { min-width: 0; }
+    p { margin: 0; }
+    address { margin: 0; display: flex; flex-wrap: wrap; column-gap: 1.8rem; row-gap: .45rem; font-style: normal; }
+    .citizenship { margin-top: .45rem; color: var(--muted); }
+    .summary { margin-top: 1.4rem; max-width: 46rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; line-height: 1.65; }
+    .entry + .entry { margin-top: 1.8rem; }
+    .entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem; }
+    h3, h4 { margin: 0; color: var(--ink); font-size: 1.0625rem; font-weight: 650; line-height: 1.5; }
+    .entry-heading h3 { flex: 1; }
+    .date { flex-shrink: 0; color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+    .institution-line { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .1rem 1rem; }
+    .gpa { color: var(--muted); font-size: .875rem; }
+    .planned { margin-top: .5rem; color: var(--muted); font-style: italic; }
+    .coursework { margin-top: 1.4rem; }
+    .coursework h4 { font-size: 1rem; font-weight: 600; }
+    ul { margin: .65rem 0 0; padding-left: 1.25rem; }
+    li { padding-left: .15rem; }
+    li + li { margin-top: .35rem; }
+    li::marker { color: var(--muted); }
+    .completed { margin-top: 1.2rem; }
+    .completed strong { font-weight: 600; }
+    .role { margin-top: 1rem; }
+    .role + .role { margin-top: 1.3rem; }
+    .project-link { display: inline-block; margin-top: .25rem; }
+    @media (max-width: 1200px) {
+      .resume { padding: 3rem; }
+    }
+    @media (max-width: 991.98px) {
+      .resume { padding: 2.5rem; }
+      .entry-heading { flex-wrap: wrap; }
+      .entry-heading h3 { flex-basis: 100%; }
+    }
+    @media screen and (max-width: 767.98px) {
+      body { background: #fff; }
+      .resume { margin: 0; padding: 1.5rem clamp(1rem, 4vw, 1.35rem); box-shadow: none; }
+      h1 { font-size: clamp(2.25rem, 6vw + .5rem, 2.8rem); }
+      .section { padding-top: 1.5rem; }
+      .section + .section { margin-top: 1.5rem; }
+      .section-label { font-size: .875rem; }
+      address { display: grid; gap: .45rem; }
+      .summary { font-size: 1.15rem; }
+      .entry-heading { display: block; }
+      .date { display: block; margin-top: .2rem; }
+      .institution-line { display: block; }
+      .gpa { display: block; }
+    }
+    @page { size: letter; margin: .45in .5in; }
+    @media print {
+      html { font-size: 9pt; }
+      body { background: #fff; line-height: 1.25; }
+      .resume { max-width: none; margin: 0; padding: 0; border-top: 0; box-shadow: none; }
+      h1 { font-size: 25pt; }
+      .page-header { padding-bottom: .55rem; }
+      .section { padding-top: .8rem; }
+      .section > .row { display: grid; grid-template-columns: 7.8rem minmax(0, 1fr); gap: 1.15rem; margin: 0; }
+      .section > .row > [class*="col-"] { width: auto; margin: 0; padding: 0; }
+      .section + .section { margin-top: .8rem; }
+      .section-label { font-size: .9rem; line-height: 1.35; }
+      address { display: flex; column-gap: 1.2rem; row-gap: .2rem; }
+      .citizenship { margin-top: .2rem; }
+      .summary { margin-top: .65rem; font-size: 1.05rem; line-height: 1.4; }
+      h3, h4 { font-size: 1rem; line-height: 1.3; }
+      .entry-heading { display: flex; flex-wrap: nowrap; gap: 1rem; }
+      .entry-heading h3 { flex: 1; }
+      .date { display: inline; margin: 0; font-size: .9rem; }
+      .institution-line { display: flex; }
+      .gpa { font-size: .9rem; }
+      .planned { margin-top: .25rem; }
+      .entry + .entry { margin-top: .75rem; }
+      .coursework { margin-top: .75rem; }
+      .course-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.3rem; margin: 0; }
+      .course-columns > [class*="col-"] { width: auto; padding: 0; }
+      .completed { margin-top: .65rem; }
+      ul { margin-top: .35rem; }
+      li + li { margin-top: .15rem; }
+      .role, .role + .role { margin-top: .5rem; }
+      .project-link { margin-top: .15rem; }
+      a { color: inherit; text-decoration: none; }
+      .entry, .role, .coursework { break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; }
+    }
+
+/* Shared navigation and the home, hobbies, and projects pages. */
+h1, h2, h3, h4 { overflow-wrap: anywhere; }
+.site-header { margin-top: 2rem; }
+.site-brand { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; text-decoration: none; white-space: nowrap; }
+.site-nav {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-color: var(--muted);
+  --bs-navbar-hover-color: var(--accent);
+  --bs-navbar-active-color: var(--accent);
+  --bs-navbar-brand-color: var(--accent);
+  --bs-navbar-brand-hover-color: var(--accent);
+  --bs-navbar-nav-link-padding-x: .85rem;
+  --bs-navbar-toggler-border-color: var(--rule);
+}
+.site-nav .navbar-collapse { min-width: 0; }
+.site-nav .nav-item { padding: 0; }
+.site-nav .nav-item + .nav-item { margin-top: 0; }
+.site-nav .nav-link { display: inline-flex; align-items: center; min-height: 44px; padding-top: .55rem; padding-bottom: .55rem; border-bottom: 2px solid transparent; }
+.site-nav .nav-link:hover, .site-nav .nav-link.active { border-bottom-color: var(--accent); }
+.site-nav .navbar-toggler { min-height: 44px; color: var(--accent); font-size: 1rem; }
+.site-nav .navbar-toggler:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; box-shadow: none; }
+.skip-link { position: absolute; top: -100px; left: 1rem; background: #fff; padding: .75rem 1rem; z-index: 10; }
+.skip-link:focus { top: 1rem; }
+.site-header + main { margin-top: 1.5rem; }
+.website-page { margin-top: 1.5rem; margin-bottom: 3rem; padding: 3.5rem 4rem; background: #fff; border-top: 5px solid var(--accent); box-shadow: 0 8px 40px #18364e0a; }
+.website-page .page-header { padding-bottom: 2rem; }
+.website-page h2 { margin: 0 0 .75rem; color: var(--accent); font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
+.website-page .summary { max-width: 45rem; }
+.content-section { margin-top: 2rem; }
+.about-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 2rem; }
+.about-grid article { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.about-grid p + p, .content-section p + p { margin-top: .7rem; }
+.contact-section { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.home-intro + .contact-section { border-top: 0; }
+.intro-detail { margin-top: 1rem; }
+/* Move the crop window 100px left; stop at the photo edge on narrow layouts. */
+.intro-image { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: min(0px, calc(50% + 100px)) center; }
+.project-list { margin-top: 2rem; }
+.project { padding: 2rem 0; border-bottom: 1px solid var(--rule); }
+.project:first-child { padding-top: 0; }
+.project:last-child { border-bottom: 0; padding-bottom: 0; }
+.project-number { font-size: .9rem; color: var(--muted); padding-top: .25rem; font-variant-numeric: tabular-nums; }
+.project p { max-width: 46rem; }
+.project .project-number { margin-bottom: .45rem; }
+.project-figure { margin: 0; min-width: 0; }
+.project-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--accent); }
+.project-figure figcaption { margin-top: .5rem; color: var(--muted); font-size: .875rem; line-height: 1.5; }
+.project-resource { display: inline-block; margin-top: 1rem; }
+.hobby { --bs-card-bg: #f4f7f9; --bs-card-border-width: 0; --bs-card-border-radius: 0; --bs-card-inner-border-radius: 0; --bs-card-spacer-y: 1.4rem; --bs-card-spacer-x: 1.4rem; min-width: 0; border-top: 2px solid var(--accent); }
+.hobby-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.hobby h2 { margin: 0 0 .75rem; overflow-wrap: anywhere; }
+@media (max-width: 1200px) {
+  .website-page { padding: 3rem; }
+}
+@media (max-width: 991.98px) {
+  .website-page { padding: 2.5rem; }
+  .home-intro .summary { font-size: 1.15rem; }
+}
+@media screen and (max-width: 767.98px) {
+  .container { max-width: none; }
+  .site-header { margin-top: .75rem; }
+  .site-nav .container { padding-right: clamp(1rem, 4vw, 1.35rem); padding-left: clamp(1rem, 4vw, 1.35rem); }
+  .website-page { margin: 0; padding: 1.5rem clamp(1rem, 4vw, 1.35rem); box-shadow: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .intro-image { aspect-ratio: 3 / 2; }
+}
+@media print {
+  .site-header, .skip-link { display: none; }
+  .website-page { margin: 0; padding: 0; border-top: 0; box-shadow: none; }
+  .site-header + main { margin-top: 0; }
+  .about-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .hobby, .project { break-inside: avoid; }
+}
+
+/* Teaching uses the same typography, paper surface, and navy accents. */
+.teaching-facts { margin-top: 1rem; margin-bottom: 2rem; }
+.teaching-facts > div { min-width: 0; border-left: 2px solid var(--rule); padding-left: 1rem; }
+.teaching-facts dt { color: var(--muted); font-size: .875rem; font-weight: 400; }
+.teaching-facts dd { margin: .25rem 0 0; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 2rem; line-height: 1.2; overflow-wrap: anywhere; }
+.teaching-subjects { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin: 0; padding-left: 1.25rem; }
+.teaching-subjects li + li { margin-top: 0; }
+.teaching-experience { border-top: 1px solid var(--rule); padding-top: 2rem; }
+.teaching-role { margin-top: 1.5rem; break-inside: avoid; }
+.teaching-role + .teaching-role { padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+.teaching-page .entry-heading .date { margin: 0; }
+@media screen and (max-width: 480px) {
+  .teaching-subjects { display: block; }
+  .teaching-subjects li + li { margin-top: .35rem; }
+}
+
+/* Requirement: Override a Bootstrap default.
+   .btn-primary replaces Bootstrap's default blue button background and border
+   with the site's navy accent using Bootstrap's component color variables.
+   This custom stylesheet is loaded after bootstrap.min.css on every page. */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #10283a;
+  --bs-btn-hover-border-color: #10283a;
+  --bs-btn-focus-shadow-rgb: 24, 54, 78;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #10283a;
+  --bs-btn-active-border-color: #10283a;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--accent);
+  --bs-btn-disabled-border-color: var(--accent);
+}
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 1.5rem;
+  padding: .65rem 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+.site-footer {
+  width: calc(100% - 2rem);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .875rem;
+}
+.footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+/* Keep the original maximum reading width on wide screens. */
+@media (min-width: 1400px) {
+  .container { max-width: 1160px; }
+}
+
+/* Group the graphics and Excel projects while keeping the shared card layout. */
+.project-category { margin-top: 2rem; }
+.project-category + .project-category { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--accent); }
+.website-page .project-category-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.project-category-header .summary { margin-top: .75rem; }
+.website-page .project h3 { margin: 0 0 .75rem; color: var(--accent); font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
+/* Preserve every chart axis and legend instead of cropping to the photo ratio. */
+.project-chart { aspect-ratio: auto; object-fit: contain; background: #fff; border: 1px solid var(--rule); }
